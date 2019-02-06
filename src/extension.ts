@@ -1,6 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import * as child_process from 'child_process';
 
 function rangeWholeFile(doc: vscode.TextDocument): vscode.Range {
 	let lastlinum = doc.lineCount - 1;
@@ -10,7 +11,10 @@ function rangeWholeFile(doc: vscode.TextDocument): vscode.Range {
 }
 
 function getFormattedString(doc: vscode.TextDocument): string {
-	return "hello";
+	return child_process.execSync("rustfmt", {
+		encoding: 'utf-8',
+		input: doc.getText(),
+	}).toString();
 }
 
 // this method is called when your extension is activated
