@@ -11,9 +11,12 @@ function rangeWholeFile(doc: vscode.TextDocument): vscode.Range {
 }
 
 function getFormattedString(doc: vscode.TextDocument): string {
+	const workspaceDir = vscode.workspace.getWorkspaceFolder(doc.uri);
+
 	return child_process.execSync("rustfmt", {
 		encoding: 'utf-8',
 		input: doc.getText(),
+		cwd: workspaceDir?.uri.fsPath,
 	}).toString();
 }
 
