@@ -22,6 +22,10 @@ No issues are known.
 
 ## Release Notes
 
+### Version 0.1.0
+
+(This version is lost)
+
 ### Version 0.0.1
 
 Initial release.
