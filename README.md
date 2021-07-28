@@ -22,6 +22,9 @@ No issues are known.
 
 ## Release Notes
 
+### Version 0.1.2
+
+Add `--edition 2018` flag.
 
 ### Version 0.1.1
 
