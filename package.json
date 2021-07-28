@@ -1,38 +1,41 @@
 {
-	"name": "vscode-rustfmt",
-	"displayName": "vscode-rustfmt",
-	"description": "document formatter for single rust file",
-	"publisher": "statiolake",
-	"version": "0.1.1",
-	"repository": { "type": "git", "url": "https://github.com/statiolake/vscode-rustfmt/" },
-	"engines": {
-		"vscode": "^1.30.0"
-	},
-	"categories": [
-		"Other",
-		"Programming Languages",
-		"Formatters"
-	],
-	"activationEvents": [
-		"onLanguage:rust"
-	],
-	"main": "./out/extension.js",
-	"contributes": {},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"package": "vsce package",
-		"lint": "eslint src --ext ts"
-	},
-	"devDependencies": {
-		"@types/node": "^8.10.66",
-		"@types/vscode": "^1.30.0",
-		"tslint": "^5.20.1",
-		"typescript": "^3.9.10",
-		"eslint": "^7.19.0",
-		"@typescript-eslint/eslint-plugin": "^4.14.1",
-		"@typescript-eslint/parser": "^4.14.1"
-	},
-	"dependencies": {}
+  "name": "vscode-rustfmt",
+  "displayName": "vscode-rustfmt",
+  "description": "document formatter for single rust file",
+  "publisher": "statiolake",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/statiolake/vscode-rustfmt/"
+  },
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:rust"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.66",
+    "@types/vscode": "^1.30.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.9.10",
+    "eslint": "^7.19.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1"
+  },
+  "dependencies": {}
 }
