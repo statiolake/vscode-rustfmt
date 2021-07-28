@@ -4,7 +4,7 @@
 	"description": "document formatter for single rust file",
 	"publisher": "statiolake",
 	"version": "0.1.1",
-	"repository": { "type": "git", "url": "https://github.com/statiolake/vscode-rustfmt/"},
+	"repository": { "type": "git", "url": "https://github.com/statiolake/vscode-rustfmt/" },
 	"engines": {
 		"vscode": "^1.30.0"
 	},

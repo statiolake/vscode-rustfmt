@@ -22,6 +22,11 @@ No issues are known.
 
 ## Release Notes
 
+
+### Version 0.1.1
+
+Fix and issue related to not picking the local rustfmt.toml. (#2)
+
 ### Version 0.1.0
 
 (This version is lost)
