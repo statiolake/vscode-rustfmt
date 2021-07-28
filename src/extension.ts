@@ -14,7 +14,7 @@ function getFormattedString(doc: vscode.TextDocument): string {
   const workspaceDir = vscode.workspace.getWorkspaceFolder(doc.uri);
 
   return child_process
-    .execSync("rustfmt", {
+    .execSync("rustfmt --edition 2018", {
       encoding: "utf-8",
       input: doc.getText(),
       cwd: workspaceDir?.uri.fsPath
