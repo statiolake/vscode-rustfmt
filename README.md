@@ -1,26 +1,42 @@
-# vscode-rustfmt README
+# vscode-rustfmt
 
 Register `rustfmt` as a formatter for Rust code.
 
-Currently VSCode has a great extension for Rust, `vscode-rls`. However that extension doesn't have support for single `.rs` file. Especially formatting action does not triggered when file saved. This extension solves that problem.
+Note: You basically doesn't need this extension since now you can use official [Rust Analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) extension to run formatter (even for single Rust file).
 
 ## Features
 
-* Format when editing single `.rs` file
+- Format when editing `.rs` file.
+
+## Configurations
+
+Include the following setting to your `settings.json`:
+
+```
+    "[rust]": {
+        "editor.defaultFormatter": "statiolake.vscode-rustfmt",
+        "editor.formatOnSave": true  //optional
+    }
+```
+
+Alternatively, you can use official formatter:
+
+```
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust",
+        "editor.formatOnSave": true  //optional
+    }
+```
 
 ## Requirements
 
 You must have `rustfmt` in your PATH.
 
-## Extension Settings
-
-There is no settings now.
-
-## Known Issues
-
-No issues are known.
-
 ## Release Notes
+
+### Version 0.1.3
+
+Make `edition` flag configurable (defaults to 2021).
 
 ### Version 0.1.2
 

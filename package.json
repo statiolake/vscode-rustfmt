@@ -9,7 +9,7 @@
     "url": "https://github.com/statiolake/vscode-rustfmt/"
   },
   "engines": {
-    "vscode": "^1.30.0"
+    "vscode": "^1.88.0"
   },
   "categories": [
     "Other",
@@ -20,22 +20,47 @@
     "onLanguage:rust"
   ],
   "main": "./out/extension.js",
-  "contributes": {},
+  "contributes": {
+    "configuration": [
+      {
+        "title": "Rustfmt",
+        "properties": {
+          "rustfmt.path": {
+            "type": "string",
+            "default": "rustfmt",
+            "description": "Path to rustfmt executable"
+          },
+          "rustfmt.edition": {
+            "type": "string",
+            "default": "2021",
+            "enum": [
+              "2015",
+              "2018",
+              "2021"
+            ],
+            "description": "Edition of Rust"
+          }
+        }
+      }
+    ]
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "package": "vsce package",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/node": "^8.10.66",
-    "@types/vscode": "^1.30.0",
-    "tslint": "^5.20.1",
-    "typescript": "^3.9.10",
-    "eslint": "^7.19.0",
-    "@typescript-eslint/eslint-plugin": "^4.14.1",
-    "@typescript-eslint/parser": "^4.14.1"
+    "@types/node": "^20",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "eslint": "^8.57.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "typescript": "^5.4.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
 }
