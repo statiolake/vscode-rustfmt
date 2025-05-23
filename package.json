@@ -36,7 +36,8 @@
             "enum": [
               "2015",
               "2018",
-              "2021"
+              "2021",
+              "2024"
             ],
             "description": "Edition of Rust"
           }
