@@ -7,7 +7,7 @@ import { z } from "zod";
 
 const schema = z.object({
   path: z.string(),
-  edition: z.union([z.literal("2015"), z.literal("2018"), z.literal("2021")])
+  edition: z.union([z.literal("2015"), z.literal("2018"), z.literal("2021"), z.literal("2024")])
 });
 
 type Config = z.infer<typeof schema>;
